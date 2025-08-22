@@ -1,20 +1,24 @@
 {
     "name": "vscode-js-console-utils",
-    "displayName": "javascript console utils",
-    "description": "Help insert and remove console.(*) statements",
-    "version": "0.7.0",
-    "publisher": "whtouche",
-    "repository": "https://github.com/whtouche/vscode-js-console-utils",
+    "displayName": "js quick log",
+    "description": "Help insert and remove console.(*) statements. (based on a fork of javascript console utils)",
+    "version": "0.8.0",
+    "publisher": "参禅不说话",
+    "repository": "https://github.com/fml-song/vscode-js-console-utils",
     "engines": {
         "vscode": "^1.5.0"
     },
     "categories": [
         "Other"
     ],
-    "activationEvents": [
-        "onCommand:extension.insertLogStatement",
-        "onCommand:extension.deleteAllLogStatements"
+    "keywords": [
+        "console.log",
+        "javascript",
+        "debugging",
+        "deep copy",
+        "log"
     ],
+    "activationEvents": [],
     "main": "./extension",
     "contributes": {
         "commands": [
@@ -25,6 +29,10 @@
             {
                 "command": "extension.deleteAllLogStatements",
                 "title": "Delete all console.log statements"
+            },
+            {
+                "command": "extension.insertJsonLogStatement",
+                "title": "Insert JSON Deep Copy Log Statement"
             }
         ],
         "keybindings": [
@@ -38,6 +46,12 @@
                 "command": "extension.deleteAllLogStatements",
                 "key": "shift+ctrl+d",
                 "mac": "shift+cmd+d"
+            },
+            {
+                "command": "extension.insertJsonLogStatement",
+                "key": "shift+ctrl+alt+l",
+                "mac": "shift+cmd+alt+l",
+                "when": "editorTextFocus"
             }
         ]
     },

@@ -67,6 +67,24 @@ function activate(context) {
     });
     context.subscriptions.push(insertLogStatement);
 
+    const insertJsonLogStatement = vscode.commands.registerCommand('extension.insertJsonLogStatement', () => {
+        const editor = vscode.window.activeTextEditor;
+        if (!editor) { return; }
+
+        const selection = editor.selection;
+        const text = editor.document.getText(selection);
+
+        text
+            ? vscode.commands.executeCommand('editor.action.insertLineAfter')
+                .then(() => {
+                    const logToInsert = `console.log('${text}: ', JSON.parse(JSON.stringify(${text})));`;
+                    insertText(logToInsert);
+                })
+            : insertText('console.log(JSON.parse(JSON.stringify()));');
+
+    });
+    context.subscriptions.push(insertJsonLogStatement);
+
     const deleteAllLogStatements = vscode.commands.registerCommand('extension.deleteAllLogStatements', () => {
         const editor = vscode.window.activeTextEditor;
         if (!editor) { return; }

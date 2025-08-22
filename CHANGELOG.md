@@ -1,7 +1,6 @@
 # Change Log
-All notable changes to the "console-log-utils" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+## [0.8.0] - 2024-01-15
 
-## [Unreleased]
-- Initial release
+### Added
+- 插入 JSON 深拷贝 log 语句 (Ctrl+Shift+Alt+L)
