@@ -1,4 +1,4 @@
-## vscode-js-console-utils
+## js-quick-log
 
 Easily insert and remove console.log statements in VS Code.
 

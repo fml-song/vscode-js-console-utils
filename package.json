@@ -1,10 +1,11 @@
 {
-    "name": "vscode-js-console-utils",
+    "name": "js-quick-log",
     "displayName": "js quick log",
     "description": "Help insert and remove console.(*) statements. (based on a fork of javascript console utils)",
-    "version": "0.8.0",
-    "publisher": "参禅不说话",
+    "version": "0.1.2",
+    "publisher": "Void0",
     "repository": "https://github.com/fml-song/vscode-js-console-utils",
+    "icon": "icon.png",
     "engines": {
         "vscode": "^1.5.0"
     },
